@@ -4,10 +4,13 @@ public class Main {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
+        int dim;
 
-        System.out.printf("inserisci la quantità di numeri che vuoi inserire");
+        do{
+            System.out.printf("vuoi inserire 11 o 10 numeri?");
+            dim = scanner.nextInt();
+        }while(dim!=11||dim!=10);
 
-        int dim = scanner.nextInt();
         int[] array= new int[dim];
 
         array = inserimento(scanner,array);
@@ -29,7 +32,7 @@ public class Main {
                 }else{
                     System.out.println("numero non valido reinserisci");
                 }
-            }while(temp<0||temp>30);
+            }while(temp<1||temp>30);
 
         }
         return array;
